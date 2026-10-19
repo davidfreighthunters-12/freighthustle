@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" preserveAspectRatio="xMaxYMid slice" role="img" aria-label="FreightHustle truck on the highway">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#0b1f3a"/>
+<stop offset="1" stop-color="#12305a"/>
+</linearGradient>
+<g id="wheel">
+<circle r="24" fill="#1c2733"/>
+<circle r="10" fill="#9fb3cc"/>
+</g>
+</defs>
+<rect width="1600" height="600" fill="url(#sky)"/>
+<circle cx="1330" cy="130" r="230" fill="#ff7a1a" opacity="0.12"/>
+<circle cx="1330" cy="130" r="120" fill="#ff7a1a" opacity="0.12"/>
+<g fill="#0a1a31" opacity="0.7">
+<rect x="40" y="400" width="60" height="100"/>
+<rect x="120" y="430" width="50" height="70"/>
+<rect x="190" y="380" width="70" height="120"/>
+<rect x="280" y="420" width="60" height="80"/>
+<rect x="360" y="350" width="50" height="150"/>
+<rect x="430" y="410" width="80" height="90"/>
+<rect x="530" y="390" width="60" height="110"/>
+<rect x="610" y="430" width="70" height="70"/>
+<rect x="700" y="370" width="60" height="130"/>
+<rect x="780" y="420" width="40" height="80"/>
+</g>
+<rect y="500" width="1600" height="100" fill="#08162b"/>
+<rect y="500" width="1600" height="5" fill="#ff7a1a"/>
+<line x1="0" y1="552" x2="1600" y2="552" stroke="#ffffff" stroke-width="6" stroke-dasharray="70 50" opacity="0.55"/>
+<g stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.18">
+<line x1="560" y1="380" x2="800" y2="380"/>
+<line x1="620" y1="420" x2="810" y2="420"/>
+<line x1="590" y1="460" x2="800" y2="460"/>
+</g>
+<polygon points="1464,430 1600,380 1600,500 1464,455" fill="#ffd9a8" opacity="0.1"/>
+<rect x="830" y="330" width="440" height="140" rx="6" fill="#f5f7fa"/>
+<rect x="830" y="410" width="440" height="22" fill="#ff7a1a"/>
+<rect x="830" y="470" width="440" height="10" fill="#2b3645"/>
+<text x="1050" y="388" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800" fill="#0b1f3a">FREIGHTHUSTLE</text>
+<rect x="1250" y="470" width="214" height="22" fill="#2b3645"/>
+<rect x="1250" y="466" width="100" height="8" fill="#5b6b7c"/>
+<rect x="1388" y="326" width="9" height="64" fill="#8a96a5"/>
+<rect x="1290" y="360" width="110" height="120" rx="10" fill="#ff7a1a"/>
+<rect x="1394" y="410" width="70" height="70" rx="8" fill="#ff7a1a"/>
+<rect x="1330" y="374" width="52" height="46" rx="4" fill="#cfe3f7"/>
+<circle cx="1458" cy="440" r="6" fill="#ffd9a8"/>
+<use href="#wheel" x="900" y="492"/>
+<use href="#wheel" x="954" y="492"/>
+<use href="#wheel" x="1322" y="492"/>
+<use href="#wheel" x="1430" y="492"/>
+</svg>
