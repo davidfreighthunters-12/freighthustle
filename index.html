@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreightHustle | Truck Dispatch Services for Owner-Operators & Small Carriers</title>
+  <meta name="description" content="FreightHustle provides truck dispatching for owner-operators and small carriers. Dry van, reefer, flatbed, power only, box truck and hotshot. All 48 states. Call (551) 222-0871.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚛</text></svg>">
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --navy-light: #12305a;
+      --orange: #ff7a1a;
+      --orange-dark: #e2650a;
+      --bg: #f5f7fa;
+      --text: #1c2733;
+      --muted: #5b6b7c;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    img, svg { max-width: 100%; }
+    a { color: inherit; }
+    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 70px 0; }
+    h1, h2, h3 { line-height: 1.2; color: var(--navy); }
+    h2 { font-size: 2rem; margin-bottom: 12px; }
+    .section-intro { color: var(--muted); max-width: 640px; margin-bottom: 40px; font-size: 1.05rem; }
+    .eyebrow { color: var(--orange-dark); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; margin-bottom: 8px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-block; padding: 14px 28px; border-radius: 8px; font-weight: 700;
+      text-decoration: none; border: 2px solid transparent; cursor: pointer; font-size: 1rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: var(--orange); color: #fff; }
+    .btn-primary:hover { background: var(--orange-dark); }
+    .btn-outline { border-color: #fff; color: #fff; }
+    .btn-outline:hover { background: rgba(255,255,255,0.12); }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100; background: var(--navy);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { color: #fff; font-weight: 800; font-size: 1.4rem; text-decoration: none; letter-spacing: 0.5px; }
+    .logo span { color: var(--orange); }
+    nav ul { display: flex; list-style: none; gap: 26px; align-items: center; }
+    nav a { color: #dbe5f2; text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    nav a:hover { color: var(--orange); }
+    nav a.nav-cta { background: var(--orange); color: #fff; padding: 9px 18px; border-radius: 6px; }
+    nav a.nav-cta:hover { background: var(--orange-dark); color: #fff; }
+    .menu-toggle {
+      display: none; background: none; border: 0; color: #fff; font-size: 1.8rem; cursor: pointer; padding: 4px 8px;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: #fff; padding: 90px 0 100px; position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; right: -120px; top: -120px; width: 420px; height: 420px;
+      border-radius: 50%; background: rgba(255,122,26,0.12);
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero h1 { color: #fff; font-size: 3rem; max-width: 720px; margin-bottom: 18px; }
+    .hero h1 span { color: var(--orange); }
+    .hero p { font-size: 1.2rem; color: #cfdcec; max-width: 600px; margin-bottom: 32px; }
+    .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-badges { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 44px; color: #cfdcec; font-size: 0.95rem; }
+    .hero-badges div::before { content: "✓ "; color: var(--orange); font-weight: 800; }
+
+    /* Services */
+    #services { background: var(--bg); }
+    .grid { display: grid; gap: 22px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .card {
+      background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(11,31,58,0.08);
+      border-top: 4px solid var(--orange);
+    }
+    .card .icon { font-size: 2rem; margin-bottom: 10px; }
+    .card h3 { margin-bottom: 8px; font-size: 1.15rem; }
+    .card p { color: var(--muted); font-size: 0.96rem; }
+
+    /* How it works */
+    .step { text-align: left; }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin-bottom: 14px;
+    }
+    .step h3 { margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: 0.96rem; }
+
+    /* Pricing */
+    #pricing { background: var(--navy); color: #fff; }
+    #pricing h2 { color: #fff; }
+    #pricing .section-intro { color: #cfdcec; }
+    .price-box {
+      background: #fff; color: var(--text); border-radius: 14px; padding: 40px; max-width: 760px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;
+    }
+    .price-box h3 { font-size: 1.6rem; margin-bottom: 8px; }
+    .price-box p { color: var(--muted); }
+    .price-box ul { list-style: none; }
+    .price-box li { padding: 6px 0; font-weight: 600; }
+    .price-box li::before { content: "✓ "; color: var(--orange-dark); font-weight: 800; }
+    .price-box .btn { margin-top: 18px; }
+
+    /* Why */
+    .why-item { display: flex; gap: 16px; }
+    .why-item .tick {
+      flex: 0 0 38px; height: 38px; border-radius: 50%; background: var(--orange); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-weight: 800;
+    }
+    .why-item h3 { font-size: 1.1rem; margin-bottom: 4px; }
+    .why-item p { color: var(--muted); font-size: 0.96rem; }
+
+    /* FAQ */
+    #faq { background: var(--bg); }
+    .faq-list { max-width: 800px; }
+    details {
+      background: #fff; border-radius: 10px; margin-bottom: 12px; padding: 18px 22px;
+      box-shadow: 0 1px 6px rgba(11,31,58,0.07);
+    }
+    summary { font-weight: 700; cursor: pointer; color: var(--navy); list-style: none; position: relative; padding-right: 30px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 0; top: -2px; font-size: 1.5rem; color: var(--orange-dark); }
+    details[open] summary::after { content: "–"; }
+    details p { margin-top: 12px; color: var(--muted); }
+
+    /* Contact */
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; align-items: start; }
+    .contact-info p { color: var(--muted); margin-bottom: 20px; }
+    .contact-line { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .contact-line a { text-decoration: none; color: var(--orange-dark); }
+    form {
+      background: var(--bg); padding: 30px; border-radius: 14px; border: 1px solid #e1e7ee;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--navy); }
+    input, select, textarea {
+      width: 100%; padding: 12px 14px; border: 1px solid #c8d2de; border-radius: 8px;
+      font-size: 1rem; font-family: inherit; background: #fff; margin-bottom: 16px;
+    }
+    input:focus, select:focus, textarea:focus { outline: 2px solid var(--orange); border-color: var(--orange); }
+    textarea { min-height: 110px; resize: vertical; }
+    form .btn { width: 100%; }
+    .form-note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; text-align: center; }
+
+    /* Footer */
+    footer { background: var(--navy); color: #b8c7da; padding: 34px 0; text-align: center; font-size: 0.92rem; }
+    footer strong { color: #fff; }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    /* Sticky mobile call bar */
+    .call-bar {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+      background: var(--orange); color: #fff; text-align: center; padding: 14px;
+      font-weight: 800; text-decoration: none; font-size: 1.05rem; box-shadow: 0 -2px 10px rgba(0,0,0,0.25);
+    }
+
+    /* Tablet & Mobile */
+    @media (max-width: 900px) {
+      .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+      .contact-wrap { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      section { padding: 52px 0; }
+      h2 { font-size: 1.6rem; }
+      .hero { padding: 60px 0 70px; }
+      .hero h1 { font-size: 2.1rem; }
+      .hero p { font-size: 1.05rem; }
+      .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .price-box { grid-template-columns: 1fr; padding: 28px; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .menu-toggle { display: block; }
+      nav ul {
+        display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--navy);
+        flex-direction: column; padding: 18px 20px 24px; gap: 16px; align-items: flex-start;
+        border-top: 1px solid rgba(255,255,255,0.1);
+      }
+      nav ul.open { display: flex; }
+      .call-bar { display: block; }
+      body { padding-bottom: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo">Freight<span>Hustle</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <nav>
+        <ul id="navList">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="nav-cta">Get Started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME / HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <p class="eyebrow">Truck Dispatch Services</p>
+      <h1>Keep your truck moving. <span>We find the loads.</span></h1>
+      <p>FreightHustle handles load searching, rate negotiation, and paperwork for owner-operators and small carriers, so you can focus on driving and running your business.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Request Dispatch Service</a>
+        <a href="tel:+15512220871" class="btn btn-outline">Call (551) 222-0871</a>
+      </div>
+      <div class="hero-badges">
+        <div>All 48 states</div>
+        <div>Owner-operators &amp; small fleets</div>
+        <div>Real people, real answers</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <p class="eyebrow">What We Do</p>
+      <h2>Dispatch services built for small carriers</h2>
+      <p class="section-intro">From finding the right load to getting you paid, we take the back-office work off your plate.</p>
+      <div class="grid grid-3">
+        <div class="card"><div class="icon">🔎</div><h3>Load Searching</h3><p>We search the load boards daily to find freight that fits your equipment, lanes, and schedule.</p></div>
+        <div class="card"><div class="icon">💵</div><h3>Rate Negotiation</h3><p>We negotiate with brokers to get you strong rates, so you aren't leaving money on the table.</p></div>
+        <div class="card"><div class="icon">📄</div><h3>Paperwork Support</h3><p>Rate confirmations, broker packets, and BOLs handled so nothing slows you down.</p></div>
+        <div class="card"><div class="icon">🗺️</div><h3>Route &amp; Lane Planning</h3><p>We plan loads to reduce deadhead and keep you moving in the right direction.</p></div>
+        <div class="card"><div class="icon">📞</div><h3>Broker Communication</h3><p>We deal with the calls and emails so you can stay focused on the road.</p></div>
+        <div class="card"><div class="icon">🧾</div><h3>Invoicing Help</h3><p>We help get your invoices submitted promptly so you get paid faster.</p></div>
+      </div>
+
+      <h2 style="margin-top:56px;">Equipment we dispatch</h2>
+      <p class="section-intro">Whatever you haul, we can find you loads for it.</p>
+      <div class="grid grid-3">
+        <div class="card"><h3>🚚 Dry Van</h3></div>
+        <div class="card"><h3>❄️ Reefer</h3></div>
+        <div class="card"><h3>🛏️ Flatbed</h3></div>
+        <div class="card"><h3>🔗 Power Only</h3></div>
+        <div class="card"><h3>📦 Box Truck</h3></div>
+        <div class="card"><h3>⚡ Hotshot</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="container">
+      <p class="eyebrow">How It Works</p>
+      <h2>Getting started is simple</h2>
+      <p class="section-intro">Four easy steps from first call to first load.</p>
+      <div class="grid grid-4">
+        <div class="step"><div class="step-num">1</div><h3>Contact Us</h3><p>Fill out the form or call us. Tell us about your truck, lanes, and goals.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Onboarding</h3><p>We collect your carrier documents and set you up with brokers.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>We Book Your Loads</h3><p>We find and negotiate loads that fit your preferences and send you the details.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>You Haul &amp; Get Paid</h3><p>You deliver, we handle the paperwork and follow-up so you get paid.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <p class="eyebrow">Pricing</p>
+      <h2>Simple, transparent pricing</h2>
+      <p class="section-intro">We only do well when you do well. No surprises and no hidden fees.</p>
+      <div class="price-box">
+        <div>
+          <h3>Percentage-based dispatch</h3>
+          <p>Your rate depends on your equipment and how many trucks you run. Call or send a request and we'll give you a clear quote up front.</p>
+          <a href="#contact" class="btn btn-primary">Get My Quote</a>
+        </div>
+        <ul>
+          <li>No hidden fees</li>
+          <li>Pay only on loads we book</li>
+          <li>Clear terms, explained up front</li>
+          <li>Dispatch support from real people</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why">
+    <div class="container">
+      <p class="eyebrow">Why Choose Us</p>
+      <h2>Dispatch that works for you</h2>
+      <p class="section-intro">We're a small, hands-on team that treats your truck like our own business.</p>
+      <div class="grid grid-3">
+        <div class="why-item"><div class="tick">✓</div><div><h3>Dispatcher-Run</h3><p>Built by an active freight dispatcher who knows the market and the brokers.</p></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><h3>Straight Talk</h3><p>Honest rates, honest answers. We tell you what a load really pays.</p></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><h3>You Stay in Control</h3><p>You approve every load. We never book without your okay.</p></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><h3>Fast Response</h3><p>Questions on the road? Call or text and get a real answer quickly.</p></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><h3>All Equipment Types</h3><p>Dry van, reefer, flatbed, power only, box truck, and hotshot.</p></div></div>
+        <div class="why-item"><div class="tick">✓</div><div><h3>Nationwide Lanes</h3><p>We dispatch across all 48 states to keep your truck loaded.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <p class="eyebrow">FAQ</p>
+      <h2>Common questions</h2>
+      <p class="section-intro">Quick answers to what carriers ask us most.</p>
+      <div class="faq-list">
+        <details><summary>What does a truck dispatcher do?</summary><p>A dispatcher finds loads, negotiates rates with brokers, handles paperwork, and keeps communication running so you can focus on driving.</p></details>
+        <details><summary>Do I need my own MC authority?</summary><p>Yes, you generally need active operating authority (MC/DOT), insurance, and your carrier documents in order. If you're unsure where you stand, call us and we'll walk you through it.</p></details>
+        <details><summary>How much does dispatching cost?</summary><p>We charge a percentage of the loads we book for you. The exact rate depends on your equipment and fleet size, so contact us for a clear quote.</p></details>
+        <details><summary>Do I have to sign a long contract?</summary><p>We'll explain our terms clearly before you start. Ask us about the agreement when you contact us so you know exactly what to expect.</p></details>
+        <details><summary>Do you book loads without asking me?</summary><p>No. You approve every load before we confirm it.</p></details>
+        <details><summary>What equipment do you dispatch?</summary><p>Dry van, reefer, flatbed, power only, box truck, and hotshot.</p></details>
+        <details><summary>What areas do you cover?</summary><p>We dispatch across all 48 states. Tell us your preferred lanes and home base and we'll plan around them.</p></details>
+        <details><summary>What documents will I need?</summary><p>Typically your MC/DOT authority, W-9, certificate of insurance (COI), and a copy of your authority letter. We'll guide you through it during onboarding.</p></details>
+        <details><summary>Who handles detention and layover?</summary><p>We help you document and request detention or layover pay from the broker. Keep your timestamps and we'll follow up on your behalf.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h2>Ready to get moving?</h2>
+      <p class="section-intro">Fill out the form and we'll reach out shortly, or just call us.</p>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <p>Tell us a little about your truck and lanes. We'll get back to you to talk through how dispatch can work for you.</p>
+          <div class="contact-line">📞 <a href="tel:+15512220871">(551) 222-0871</a></div>
+          <div class="contact-line">🕒 Call or text anytime</div>
+        </div>
+
+        <form action="https://formsubmit.co/david.freighthunters@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New dispatch request - FreightHustle">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="form-row">
+            <div><label for="name">Your Name *</label><input type="text" id="name" name="Name" required></div>
+            <div><label for="company">Company Name</label><input type="text" id="company" name="Company"></div>
+          </div>
+          <div class="form-row">
+            <div><label for="phone">Phone *</label><input type="tel" id="phone" name="Phone" required></div>
+            <div><label for="email">Email *</label><input type="email" id="email" name="Email" required></div>
+          </div>
+          <div class="form-row">
+            <div><label for="mc">MC / DOT Number</label><input type="text" id="mc" name="MC-DOT"></div>
+            <div><label for="trucks">Number of Trucks</label><input type="number" id="trucks" name="Trucks" min="1" value="1"></div>
+          </div>
+          <label for="equipment">Equipment Type *</label>
+          <select id="equipment" name="Equipment" required>
+            <option value="">Select equipment</option>
+            <option>Dry Van</option>
+            <option>Reefer</option>
+            <option>Flatbed</option>
+            <option>Power Only</option>
+            <option>Box Truck</option>
+            <option>Hotshot</option>
+            <option>Other</option>
+          </select>
+          <label for="lanes">Preferred Lanes / Home Base</label>
+          <input type="text" id="lanes" name="Lanes" placeholder="e.g. Northeast to Southeast">
+          <label for="message">Anything else we should know?</label>
+          <textarea id="message" name="Message"></textarea>
+
+          <button type="submit" class="btn btn-primary">Request Dispatch Service</button>
+          <p class="form-note">We'll never share your information.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p><strong>FreightHustle</strong> &middot; Truck Dispatch Services &middot; <a href="tel:+15512220871">(551) 222-0871</a></p>
+      <p style="margin-top:8px;">&copy; <span id="year"></span> FreightHustle. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sticky call button (mobile only) -->
+  <a href="tel:+15512220871" class="call-bar">📞 Tap to Call (551) 222-0871</a>
+
+  <script>
+    // Mobile menu
+    var toggle = document.getElementById('menuToggle');
+    var list = document.getElementById('navList');
+    toggle.addEventListener('click', function () { list.classList.toggle('open'); });
+    list.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') { list.classList.remove('open'); }
+    });
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
