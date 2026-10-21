@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Freighthunters | Truck Dispatch Services for Owner-Operators & Small Carriers</title>
-<meta name="description" content="Freighthunters provides truck dispatching for owner-operators and small carriers. Dry van, reefer, flatbed, power only, box truck and hotshot. All 48 states. Call (551) 222-0871.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚛</text></svg>">
+<title>FreightHunters | Truck Dispatch Services for Owner-Operators &amp; Small Carriers</title>
+<meta name="description" content="FreightHunters provides truck dispatching for owner-operators and small carriers. Dry van, reefer, flatbed, power only, box truck and hotshot. All 48 states. Call (551) 222-0871.">
+<link rel="canonical" href="https://freighthunters.co/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreightHunters">
+<meta property="og:title" content="FreightHunters | Truck Dispatch Services">
+<meta property="og:description" content="Truck dispatching for owner-operators and small carriers. All 48 states. Call (551) 222-0871.">
+<meta property="og:url" content="https://freighthunters.co/">
+<link rel="icon" type="image/svg+xml" href="logo-icon.svg">
 <style>
 :root{--navy:#0b1f3a;--navy-light:#12305a;--orange:#ff7a1a;--orange-dark:#e2650a;--bg:#f5f7fa;--text:#1c2733;--muted:#5b6b7c}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -54,6 +60,10 @@ nav a.nav-cta:hover{background:var(--orange-dark);color:#fff}
 .card .icon{font-size:2rem;margin-bottom:10px}
 .card h3{margin-bottom:8px;font-size:1.15rem}
 .card p{color:var(--muted);font-size:.96rem}
+.equip-card{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(11,31,58,.08);border-top:4px solid var(--orange);overflow:hidden}
+.equip-card svg.pic{display:block;width:100%;height:auto;background:linear-gradient(#e6eef8,#f8fbfe)}
+.equip-card h3{padding:14px 20px 4px;font-size:1.15rem}
+.equip-card p{padding:0 20px 20px;color:var(--muted);font-size:.93rem}
 .step-num{width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;margin-bottom:14px}
 .step h3{margin-bottom:6px}
 .step p{color:var(--muted);font-size:.96rem}
@@ -89,6 +99,13 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";position:absolute;right:0;top:-2px;font-size:1.5rem;color:var(--orange-dark)}
 details[open] summary::after{content:"–"}
 details p{margin-top:12px;color:var(--muted)}
+#reviews{background:#fff}
+.review-card{background:var(--bg);border-radius:12px;padding:26px;border-left:4px solid var(--orange)}
+.review-card .quote{font-size:1.02rem;color:var(--text);margin-bottom:14px}
+.review-card .who{font-weight:700;color:var(--navy);font-size:.92rem}
+.review-card .who span{color:var(--muted);font-weight:600}
+.review-invite{background:var(--bg);border-radius:14px;padding:34px;text-align:center;max-width:640px}
+.review-invite p{color:var(--muted);margin-bottom:18px}
 .contact-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:50px;align-items:start}
 .contact-info p{color:var(--muted);margin-bottom:20px}
 .contact-line{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
@@ -130,7 +147,7 @@ body{padding-bottom:54px}
 
 <header>
 <div class="container nav">
-<a href="#home" class="logo"><img src="logo.svg" alt="Freighthunters" style="display:block;height:46px;width:auto"></a>
+<a href="#home" class="logo"><img src="logo.svg" alt="FreightHunters" style="display:block;height:46px;width:auto"></a>
 <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
 <nav>
 <ul id="navList">
@@ -140,6 +157,7 @@ body{padding-bottom:54px}
 <li><a href="#pricing">Pricing</a></li>
 <li><a href="#why">Why Us</a></li>
 <li><a href="#faq">FAQ</a></li>
+<li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact" class="nav-cta">Get Started</a></li>
 </ul>
 </nav>
@@ -150,7 +168,7 @@ body{padding-bottom:54px}
 <div class="container">
 <p class="eyebrow">Truck Dispatch Services</p>
 <h1>Keep your truck moving. <span>We find the loads.</span></h1>
-<p>Freighthunters handles load searching, rate negotiation, and paperwork for owner-operators and small carriers, so you can focus on driving and running your business.</p>
+<p>FreightHunters handles load searching, rate negotiation, and paperwork for owner-operators and small carriers, so you can focus on driving and running your business.</p>
 <div class="hero-buttons">
 <a href="#contact" class="btn btn-primary">Request Dispatch Service</a>
 <a href="tel:+15512220871" class="btn btn-outline">Call (551) 222-0871</a>
@@ -161,7 +179,7 @@ body{padding-bottom:54px}
 <!-- TRUST BADGES: each badge is ONE line. Delete any line that is not true for your business. -->
 <div class="trust">
 <div class="container">
-<p class="trust-title">Why carriers trust Freighthunters</p>
+<p class="trust-title">Why carriers trust FreightHunters</p>
 <div class="badges">
 <div class="badge">No Hidden Fees</div>
 <div class="badge">You Approve Every Load</div>
@@ -183,15 +201,10 @@ body{padding-bottom:54px}
 <div class="card"><div class="icon">📞</div><h3>Broker Communication</h3><p>We deal with the calls and emails so you can stay focused on the road.</p></div>
 <div class="card"><div class="icon">🧾</div><h3>Invoicing Help</h3><p>We help get your invoices submitted promptly so you get paid faster.</p></div>
 </div>
+
 <h2 style="margin-top:56px;">Equipment we dispatch</h2>
 <p class="section-intro">Whatever you haul, we can find you loads for it.</p>
-<div class="grid grid-3">
-<style>
-.equip-card{background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(11,31,58,.08);border-top:4px solid var(--orange);overflow:hidden}
-.equip-card svg.pic{display:block;width:100%;height:auto;background:linear-gradient(#e6eef8,#f8fbfe)}
-.equip-card h3{padding:14px 20px 4px;font-size:1.15rem}
-.equip-card p{padding:0 20px 20px;color:var(--muted);font-size:.93rem}
-</style>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <defs>
 <symbol id="fh-wheel" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#1c2733"/><circle cx="10" cy="10" r="4" fill="#9fb3cc"/></symbol>
@@ -210,13 +223,15 @@ body{padding-bottom:54px}
 </defs>
 </svg>
 
+<div class="grid grid-3">
+
 <div class="equip-card">
 <svg class="pic" viewBox="0 0 260 96" role="img" aria-label="Dry van truck">
 <line x1="0" y1="93.5" x2="260" y2="93.5" stroke="#cfd8e3" stroke-width="2"/>
 <use href="#fh-tractor" x="170" y="22" width="90" height="72"/>
 <rect x="4" y="16" width="192" height="58" rx="3" fill="#fff" stroke="#0b1f3a" stroke-width="2"/>
 <rect x="5" y="50" width="190" height="9" fill="#ff7a1a"/>
-<text x="100" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="17" fill="#0b1f3a">Freighthunters</text>
+<text x="100" y="40" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="17" fill="#0b1f3a">FreightHunters</text>
 <rect x="4" y="74" width="192" height="4" fill="#2b3645"/>
 <use href="#fh-wheel" x="31" y="75" width="18" height="18"/>
 <use href="#fh-wheel" x="49" y="75" width="18" height="18"/>
@@ -289,7 +304,7 @@ body{padding-bottom:54px}
 </svg>
 <h3>Box Truck</h3><p>Straight trucks for local and regional freight.</p>
 </div>
-  
+
 <div class="equip-card">
 <svg class="pic" viewBox="0 0 260 96" role="img" aria-label="Hotshot truck with gooseneck trailer">
 <line x1="0" y1="93.5" x2="260" y2="93.5" stroke="#cfd8e3" stroke-width="2"/>
@@ -309,6 +324,7 @@ body{padding-bottom:54px}
 </svg>
 <h3>Hotshot</h3><p>Pickup-and-gooseneck trailers for time-sensitive loads.</p>
 </div>
+
 </div>
 </div>
 </section>
@@ -414,53 +430,19 @@ body{padding-bottom:54px}
 <details><summary>Who handles detention and layover?</summary><p>We help you document and request detention or layover pay from the broker. Keep your timestamps and we’ll follow up on your behalf.</p></details>
 </div>
 </div>
+</section>
 
-
-<!-- Freighthunters Reviews Section -->
-<section id="reviews" style="font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px;">
-  <h2 style="text-align: center; color: #111827; margin-bottom: 30px;">What Carriers Say About Freighthunters</h2>
-
-  <div style="display: grid; gap: 20px;">
-    
-    <!-- Review 1 -->
-    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 8px;">★★★★★</div>
-      <h3 style="margin: 0 0 6px 0; color: #1f2937; font-size: 18px;">Game Changer for Owner-Operators</h3>
-      <p style="margin: 0 0 12px 0; color: #4b5563; font-style: italic;">"Freighthunters took load board stress completely off my hands. They book high-paying loads, minimize deadhead miles, and handle all the paperwork. My weekly gross jumped 25% in month one!"</p>
-      <p style="margin: 0; font-weight: bold; color: #111827; font-size: 14px;">Marcus T. <span style="font-weight: normal; color: #6b7280;">| Dry Van</span></p>
-    </div>
-
-    <!-- Review 2 -->
-    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 8px;">★★★★★</div>
-      <h3 style="margin: 0 0 6px 0; color: #1f2937; font-size: 18px;">Keeps Our Small Fleet Profitable</h3>
-      <p style="margin: 0 0 12px 0; color: #4b5563; font-style: italic;">"Finding dispatchers who negotiate hard and plan ahead used to be impossible. Freighthunters keeps our 3 trucks moving with zero downtime and top market rates. Excellent communication!"</p>
-      <p style="margin: 0; font-weight: bold; color: #111827; font-size: 14px;">Elena &amp; Dan R. <span style="font-weight: normal; color: #6b7280;">| Box Truck Fleet Owners</span></p>
-    </div>
-
-    <!-- Review 3 -->
-    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 8px;">★★★★★</div>
-      <h3 style="margin: 0 0 6px 0; color: #1f2937; font-size: 18px;">Top-Tier Hotshot Dispatching</h3>
-      <p style="margin: 0 0 12px 0; color: #4b5563; font-style: italic;">"They actually understand hotshot lanes and load nuances. Keep my rig loaded at high RPMs while respecting my home time. Fair, honest, and reliable."</p>
-      <p style="margin: 0; font-weight: bold; color: #111827; font-size: 14px;">Jake V. <span style="font-weight: normal; color: #6b7280;">| Hotshot Hauler</span></p>
-    </div>
-
-    <!-- Review 4 -->
-    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 8px;">★★★★★</div>
-      <h3 style="margin: 0 0 6px 0; color: #1f2937; font-size: 18px;">Always Fights for the Carrier</h3>
-      <p style="margin: 0 0 12px 0; color: #4b5563; font-style: italic;">"24/7 support and total transparency. They fight hard for every dollar—including detention pay and layovers. They feel like true in-house partners."</p>
-      <p style="margin: 0; font-weight: bold; color: #111827; font-size: 14px;">Sarah M. <span style="font-weight: normal; color: #6b7280;">| Power-Only / Flatbed</span></p>
-    </div>
-
-    <!-- Review 5 -->
-    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <div style="color: #f59e0b; font-size: 18px; margin-bottom: 8px;">★★★★★</div>
-      <h3 style="margin: 0 0 6px 0; color: #1f2937; font-size: 18px;">Essential for New MC Authorities</h3>
-      <p style="margin: 0 0 12px 0; color: #4b5563; font-style: italic;">"Navigating brokers as a new authority was tough until I joined Freighthunters. They got me loaded with steady, profitable freight from day one."</p>
-      <p style="margin: 0; font-weight: bold; color: #111827; font-size: 14px;">Derrick K. <span style="font-weight: normal; color: #6b7280;">| New Authority Owner-Operator</span></p>
-
+<section id="reviews">
+<div class="container">
+<p class="eyebrow">Carrier Reviews</p>
+<h2>What carriers say</h2>
+<p class="section-intro">Real feedback from carriers we dispatch.</p>
+<div class="grid grid-3" id="reviewGrid"></div>
+<div class="review-invite" id="reviewInvite">
+<p>Working with FreightHunters? We’d love to hear how it’s going.</p>
+<a class="btn btn-primary" href="sms:+15512220871?&amp;body=Hi%20FreightHunters%2C%20here%27s%20my%20review%3A%20">Text Us Your Review</a>
+</div>
+</div>
 </section>
 
 <section id="contact">
@@ -472,13 +454,11 @@ body{padding-bottom:54px}
 <div class="contact-info">
 <p>Tell us a little about your truck and lanes. We’ll get back to you to talk through how dispatch can work for you.</p>
 <div class="contact-line">📞 <a href="tel:+15512220871">(551) 222-0871</a></div>
+<div class="contact-line">🌐 <a href="https://freighthunters.co">freighthunters.co</a></div>
 <div class="contact-line">🕒 Call or text anytime</div>
-
-
-
 </div>
 <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-<input type="hidden" name="_subject" value="New dispatch request - Freighthunters">
+<input type="hidden" name="_subject" value="New dispatch request - FreightHunters">
 <input type="hidden" name="_template" value="table">
 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 <div class="form-row">
@@ -517,8 +497,8 @@ body{padding-bottom:54px}
 
 <footer>
 <div class="container">
-<p><strong>Freighthunters</strong> &middot; Truck Dispatch Services &middot; <a href="tel:+15512220871">(551) 222-0871</a></p>
-<p style="margin-top:8px;">&copy; <span id="year"></span> Freighthunters. All rights reserved.</p>
+<p><strong>FreightHunters</strong> &middot; Truck Dispatch Services &middot; <a href="tel:+15512220871">(551) 222-0871</a> &middot; <a href="https://freighthunters.co">freighthunters.co</a></p>
+<p style="margin-top:8px;">&copy; <span id="year"></span> FreightHunters. All rights reserved.</p>
 </div>
 </footer>
 
@@ -556,6 +536,27 @@ function calculate() {
   document.getElementById(id).addEventListener('input', calculate);
 });
 calculate();
+
+// Carrier reviews
+// ADD REAL REVIEWS HERE. Copy one line per review, between the [ ] brackets.
+// Only use reviews from real carriers who said yes to being posted.
+// Format: { text: "Their words.", name: "Mike", detail: "Flatbed owner-operator" },
+var reviews = [
+  // { text: "Paste the carrier's review here.", name: "First name", detail: "Truck type" },
+];
+(function () {
+  var grid = document.getElementById('reviewGrid');
+  var invite = document.getElementById('reviewInvite');
+  reviews.forEach(function (r) {
+    var card = document.createElement('div');
+    card.className = 'review-card';
+    var q = document.createElement('p'); q.className = 'quote'; q.textContent = '“' + r.text + '”';
+    var w = document.createElement('p'); w.className = 'who'; w.textContent = r.name + ' ';
+    var s = document.createElement('span'); s.textContent = '· ' + r.detail; w.appendChild(s);
+    card.appendChild(q); card.appendChild(w); grid.appendChild(card);
+  });
+  if (reviews.length > 0) { invite.style.marginTop = '30px'; }
+})();
 </script>
 </body>
 </html>
