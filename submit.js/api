@@ -4,12 +4,8 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 
 const LABELS = {
   legalName: 'Legal company name', dba: 'DBA', ein: 'EIN', mc: 'MC number', dot: 'DOT number',
-  address: 'Address', city: 'City', state: 'State', zip: 'ZIP',
   ownerName: 'Owner name', ownerPhone: 'Owner phone', ownerEmail: 'Owner email',
-  dispName: 'Dispatcher name', dispPhone: 'Dispatcher phone', dispEmail: 'Dispatcher email',
   equip: 'Equipment', trucks: 'Number of trucks', lanes: 'Preferred lanes',
-  autoLiab: 'Auto liability ($)', autoExp: 'Auto liability expires', cargo: 'Cargo coverage ($)', cargoExp: 'Cargo expires', agent: 'Insurance agent',
-  payMethod: 'Payment method', factor: 'Factoring company', remitEmail: 'Remit-to email',
   signature: 'Signature', signDate: 'Signed on'
 };
 
