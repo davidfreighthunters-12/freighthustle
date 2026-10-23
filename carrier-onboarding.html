@@ -56,10 +56,6 @@ button:disabled{opacity:.6;cursor:wait}
 <label>EIN<input name="ein" required></label>
 <label>MC number<input name="mc" required></label>
 <label>DOT number<input name="dot" required></label>
-<label class="full">Street address<input name="address" required></label>
-<label>City<input name="city" required></label>
-<label>State<input name="state" required maxlength="2" placeholder="TX"></label>
-<label>ZIP<input name="zip" required></label>
 </div></fieldset>
 
 <fieldset><legend>Contacts</legend>
@@ -67,9 +63,6 @@ button:disabled{opacity:.6;cursor:wait}
 <label>Owner name<input name="ownerName" required></label>
 <label>Owner phone<input name="ownerPhone" type="tel" required></label>
 <label class="full">Owner email<input name="ownerEmail" type="email" required></label>
-<label>Dispatcher name<input name="dispName"></label>
-<label>Dispatcher phone<input name="dispPhone" type="tel"></label>
-<label class="full">Dispatcher email<input name="dispEmail" type="email"></label>
 </div></fieldset>
 
 <fieldset><legend>Equipment and lanes</legend>
@@ -88,33 +81,12 @@ button:disabled{opacity:.6;cursor:wait}
 <label>Preferred lanes or states<input name="lanes"></label>
 </div></fieldset>
 
-<fieldset><legend>Insurance</legend>
-<div class="grid">
-<label>Auto liability amount ($)<input name="autoLiab" required></label>
-<label>Auto liability expires<input name="autoExp" type="date" required></label>
-<label>Cargo coverage amount ($)<input name="cargo" required></label>
-<label>Cargo coverage expires<input name="cargoExp" type="date" required></label>
-<label class="full">Insurance agent name and phone<input name="agent"></label>
-</div></fieldset>
-
-<fieldset><legend>Payment</legend>
-<div class="grid">
-<label>How do you want to be paid?
-<select name="payMethod" required>
-<option value="">Choose one</option>
-<option>ACH</option><option>Quick pay</option><option>Factoring company</option><option>Check</option>
-</select></label>
-<label>Factoring company (if any)<input name="factor"></label>
-<label class="full">Remit-to email for payment questions<input name="remitEmail" type="email"></label>
-</div></fieldset>
-
 <fieldset><legend>Documents</legend>
 <p class="hint">PDF, JPG, or PNG. Total size of all files must be under 3 MB. Email us for larger files.</p>
 <div class="grid">
 <label class="full">W-9<input type="file" name="w9" accept=".pdf,.jpg,.jpeg,.png" required></label>
 <label class="full">Certificate of insurance<input type="file" name="coi" accept=".pdf,.jpg,.jpeg,.png" required></label>
 <label class="full">MC authority letter<input type="file" name="mcLetter" accept=".pdf,.jpg,.jpeg,.png"></label>
-<label class="full">Voided check or bank letter (ACH only)<input type="file" name="check" accept=".pdf,.jpg,.jpeg,.png"></label>
 </div></fieldset>
 
 <fieldset><legend>Agreement</legend>
