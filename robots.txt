@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /thanks.html
+
 
 Sitemap: https://freighthunters.co/sitemap.xml
