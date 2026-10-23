@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrier onboarding | Freight Hunters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f2326;--paper:#f2f1ec;--line:#cfccc2;--hi:#f0b323;--err:#b3261e;--ok:#1f6b3a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 "Archivo",system-ui,sans-serif}
+header{background:var(--ink);color:#fff;padding:2.2rem 1.25rem;border-bottom:6px solid var(--hi)}
+.wrap{max-width:720px;margin:0 auto}
+h1{margin:0 0 .4rem;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+header p{margin:0;color:#d7d9d6;max-width:60ch}
+main{padding:2rem 1.25rem 4rem}
+fieldset{border:0;border-top:2px solid var(--ink);margin:0 0 2rem;padding:1rem 0 0}
+legend{font-weight:800;font-size:1.2rem;padding:0 .75rem 0 0}
+.hint{margin:.1rem 0 1rem;color:#555;font-size:.92rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.full{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:.95rem}
+input,select,textarea{width:100%;margin-top:.3rem;padding:.65rem .7rem;font:inherit;background:#fff;border:1.5px solid var(--line);border-radius:3px;color:var(--ink)}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid var(--hi);outline-offset:1px;border-color:var(--ink)}
+input[type=file]{padding:.5rem;background:transparent;border-style:dashed}
+.check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400}
+.check input{width:auto;margin-top:.35rem}
+.checks{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.checks label{font-weight:400;display:flex;gap:.45rem;align-items:center}
+.checks input{width:auto;margin:0}
+button{background:var(--hi);color:var(--ink);border:2px solid var(--ink);font:800 1.05rem "Archivo",sans-serif;padding:.9rem 1.6rem;border-radius:3px;cursor:pointer}
+button:hover{background:var(--ink);color:var(--hi)}
+button:disabled{opacity:.6;cursor:wait}
+#msg{margin-top:1rem;font-weight:600}
+.error{color:var(--err)}.success{color:var(--ok)}
+.hp{position:absolute;left:-9999px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){button{transition:background .15s,color .15s}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Carrier onboarding</h1>
+<p>Fill this out once and upload your documents. We review every packet and contact you within one business day.</p>
+</div></header>
+<main><div class="wrap">
+<form id="f" novalidate>
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+<fieldset><legend>Company</legend>
+<div class="grid">
+<label class="full">Legal company name<input name="legalName" required></label>
+<label>DBA (if different)<input name="dba"></label>
+<label>EIN<input name="ein" required></label>
+<label>MC number<input name="mc" required></label>
+<label>DOT number<input name="dot" required></label>
+<label class="full">Street address<input name="address" required></label>
+<label>City<input name="city" required></label>
+<label>State<input name="state" required maxlength="2" placeholder="TX"></label>
+<label>ZIP<input name="zip" required></label>
+</div></fieldset>
+
+<fieldset><legend>Contacts</legend>
+<div class="grid">
+<label>Owner name<input name="ownerName" required></label>
+<label>Owner phone<input name="ownerPhone" type="tel" required></label>
+<label class="full">Owner email<input name="ownerEmail" type="email" required></label>
+<label>Dispatcher name<input name="dispName"></label>
+<label>Dispatcher phone<input name="dispPhone" type="tel"></label>
+<label class="full">Dispatcher email<input name="dispEmail" type="email"></label>
+</div></fieldset>
+
+<fieldset><legend>Equipment and lanes</legend>
+<p class="hint">Select every equipment type you run.</p>
+<div class="checks full" style="margin-bottom:1rem">
+<label><input type="checkbox" name="equip" value="Dry van">Dry van</label>
+<label><input type="checkbox" name="equip" value="Reefer">Reefer</label>
+<label><input type="checkbox" name="equip" value="Flatbed">Flatbed</label>
+<label><input type="checkbox" name="equip" value="Step deck">Step deck</label>
+<label><input type="checkbox" name="equip" value="Box truck">Box truck</label>
+<label><input type="checkbox" name="equip" value="Power only">Power only</label>
+<label><input type="checkbox" name="equip" value="Other">Other</label>
+</div>
+<div class="grid">
+<label>Number of trucks<input name="trucks" type="number" min="1"></label>
+<label>Preferred lanes or states<input name="lanes"></label>
+</div></fieldset>
+
+<fieldset><legend>Insurance</legend>
+<div class="grid">
+<label>Auto liability amount ($)<input name="autoLiab" required></label>
+<label>Auto liability expires<input name="autoExp" type="date" required></label>
+<label>Cargo coverage amount ($)<input name="cargo" required></label>
+<label>Cargo coverage expires<input name="cargoExp" type="date" required></label>
+<label class="full">Insurance agent name and phone<input name="agent"></label>
+</div></fieldset>
+
+<fieldset><legend>Payment</legend>
+<div class="grid">
+<label>How do you want to be paid?
+<select name="payMethod" required>
+<option value="">Choose one</option>
+<option>ACH</option><option>Quick pay</option><option>Factoring company</option><option>Check</option>
+</select></label>
+<label>Factoring company (if any)<input name="factor"></label>
+<label class="full">Remit-to email for payment questions<input name="remitEmail" type="email"></label>
+</div></fieldset>
+
+<fieldset><legend>Documents</legend>
+<p class="hint">PDF, JPG, or PNG. Total size of all files must be under 3 MB. Email us for larger files.</p>
+<div class="grid">
+<label class="full">W-9<input type="file" name="w9" accept=".pdf,.jpg,.jpeg,.png" required></label>
+<label class="full">Certificate of insurance<input type="file" name="coi" accept=".pdf,.jpg,.jpeg,.png" required></label>
+<label class="full">MC authority letter<input type="file" name="mcLetter" accept=".pdf,.jpg,.jpeg,.png"></label>
+<label class="full">Voided check or bank letter (ACH only)<input type="file" name="check" accept=".pdf,.jpg,.jpeg,.png"></label>
+</div></fieldset>
+
+<fieldset><legend>Agreement</legend>
+<label class="check"><input type="checkbox" name="agree" required>I confirm the information above is accurate and I am authorized to sign for this company.</label>
+<div class="grid" style="margin-top:1rem">
+<label>Type your full name as signature<input name="signature" required></label>
+<label>Date<input name="signDate" type="date" required></label>
+</div></fieldset>
+
+<button type="submit" id="btn">Submit carrier packet</button>
+<div id="msg" role="status" aria-live="polite"></div>
+</form>
+</div></main>
+<script>
+const f=document.getElementById('f'),btn=document.getElementById('btn'),msg=document.getElementById('msg');
+f.signDate.value=new Date().toISOString().slice(0,10);
+const show=(t,c)=>{msg.textContent=t;msg.className=c};
+const toB64=file=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(file)});
+f.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(!f.checkValidity()){f.reportValidity();return}
+  let total=0;const files=[];
+  for(const inp of f.querySelectorAll('input[type=file]')){
+    const file=inp.files[0];if(!file)continue;
+    total+=file.size;files.push({field:inp.name,name:file.name,type:file.type,file});
+  }
+  if(total>3*1024*1024){show('Your files total more than 3 MB. Compress them or email them to us instead.','error');return}
+  btn.disabled=true;show('Sending your packet...','');
+  try{
+    const data={equip:[...f.querySelectorAll('[name=equip]:checked')].map(c=>c.value).join(', ')};
+    for(const el of f.elements){
+      if(!el.name||el.type==='file'||el.name==='equip'||el.type==='checkbox')continue;
+      data[el.name]=el.value;
+    }
+    data.files=await Promise.all(files.map(async x=>({field:x.field,name:x.name,type:x.type,data:await toB64(x.file)})));
+    const r=await fetch('/api/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+    if(!r.ok)throw new Error();
+    f.reset();f.signDate.value=new Date().toISOString().slice(0,10);
+    show('Packet received. We will contact you within one business day.','success');
+  }catch(err){
+    show('Something went wrong and your packet was not sent. Try again, or email your documents to us.','error');
+  }finally{btn.disabled=false}
+});
+</script>
+</body>
+</html>
